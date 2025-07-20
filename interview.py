@@ -6,7 +6,7 @@ def ladderLength(beginWord, endWord, wordList):
         return 0
 
     queue = deque()
-    queue.append((beginWord, 1))  # (current_word, level)
+    queue.append((beginWord, 1))
 
     while queue:
         word, level = queue.popleft()
@@ -20,9 +20,9 @@ def ladderLength(beginWord, endWord, wordList):
 
                 if new_word in word_set:
                     queue.append((new_word, level + 1))
-                    word_set.remove(new_word)  # mark as visited
+                    word_set.remove(new_word) 
 
-    return 0  # no transformation found
+    return 0
 
 
 beginWord = "hit"
